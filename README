@@ -2,5 +2,5 @@ These are disassembled Game Boy boot ROMs.
 
 Compile them with rgbds: https://rednex.github.io/rgbds/
 
-Once they’ve been compiled, dmg0.bin, dmg.bin, and mgb.bin must be trimmed
-to 256 bytes each.
+Once they’ve been compiled, dmg0.bin, dmg.bin, mgb.bin, sgb.bin, and
+sgb2.bin must be trimmed to 256 bytes each.

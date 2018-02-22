@@ -41,7 +41,7 @@ lloop:
 
 	; load 8 additional bytes into vram
 	ld de,moredata
-	ld b,8
+	ld b,moredata_ - moredata
 eloop:
 	ld a,[de]
 	inc de
@@ -146,6 +146,7 @@ logo:
 
 moredata:
 	db $3c,$42,$b9,$a5,$b9,$a5,$42,$3c
+moredata_:
 
 logocheck:
 	ld hl,$0104 ; cart logo
