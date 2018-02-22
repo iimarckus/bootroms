@@ -1,4 +1,4 @@
-SECTION "blah",rom0
+SECTION "main",rom0
 	; set up stack
 	ld sp,$fffe
 
