@@ -1,6 +1,6 @@
 .SUFFIXES: .s .o .bin
 
-all: dmg.bin mgb.bin
+all: dmg0.bin dmg.bin mgb.bin
 
 .s.o:
 	rgbasm -o $@ $<
