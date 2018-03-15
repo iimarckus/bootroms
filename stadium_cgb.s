@@ -20,7 +20,7 @@ part2:
 	ld [$ff40],a
 
 	; set background palette
-	ld a,$fc
+	ld a,%11111100
 	ld [$ff47],a
 
 	call $0097

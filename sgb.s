@@ -27,7 +27,7 @@ vloop:
 	ld [hl],a
 
 	; set background palette
-	ld a,$fc
+	ld a,%11111100
 	ld [$ff47],a
 	ld hl,$c05f
 	ld c,8

@@ -24,7 +24,7 @@ vloop:
 	ld [hl],a
 
 	; set background palette
-	ld a,$fc
+	ld a,%11111100
 	ld [$ff47],a
 
 	; convert and load logo data from cart into vram
