@@ -73,8 +73,8 @@ lloop:
 	jr nz,lloop
 
 	; load 8 additional bytes into vram
-	ld de,moredata
-	ld b,moredata_ - moredata
+	ld de,registered
+	ld b,registered_ - registered
 eloop:
 	ld a,[de]
 	inc de
@@ -174,9 +174,9 @@ loopd6:
 	inc hl
 	ret
 
-moredata:
-	db $3c,$42,$b9,$a5,$b9,$a5,$42,$3c
-moredata_:
+registered:
+INCBIN "®.bin"
+registered_:
 	nop
 	nop
 	nop

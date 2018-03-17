@@ -14,7 +14,14 @@ loop:
 	jp part2
 
 data13:
-	db $d3,$00,$98,$a0,$12,$d3,$00,$80,$00,$40,$3c,$42,$b9,$a5,$b9,$a5,$42,$3c
+	db $d3,$00,$98,$a0,$12
+
+data18:
+	db $d3,$00,$80,$00,$40
+
+registered:
+INCBIN "®.bin"
+registered_:
 
 part2:
 	ld [$ff40],a
@@ -49,8 +56,8 @@ loop3:
 	cp $34
 	jr nz,loop3
 
-	ld de,$001d
-	ld b,$08
+	ld de,registered
+	ld b,registered_ - registered
 loop4:
 	ld a,[de]
 	inc de
@@ -417,8 +424,8 @@ loop2a9:
 	call $00b3
 	ld bc,$fff8
 	add hl,bc
-	ld de,$001d
-	ld c,$08
+	ld de,registered
+	ld c,registered_ - registered
 loop2c8:
 	inc hl
 	ld a,[de]
